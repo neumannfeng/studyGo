@@ -284,15 +284,19 @@ Go is compiled, so a running process cannot receive new source code. The watcher
 
 ```mermaid
 flowchart TD
-    A[Save a .go file] --> B[Watcher detects the change]
-    B --> C[Diff old and new source]
-    C --> D[Print changed lines with - / +]
-    D --> E[go build into .reload/]
-    E -->|failure| F[Show the compile error and wait]
-    E -->|success| G[Read .last_demo]
-    G --> H[Start test.exe -demo N]
-    H --> I[Rerun the last lesson]
+    A["Save a .go file"] --> B["Watcher detects change"]
+    B --> C["Diff old and new source"]
+    C --> D["Show changed lines"]
+    D --> E["Run go build"]
+    E -->|failure| F["Show compile error and wait"]
+    E -->|success| G["Read .last_demo"]
+    G --> H["Start new process"]
+    H --> I["Rerun the last lesson"]
 ```
+
+The diagram omits two details: build output goes to `.reload/`, and the new process reruns the last lesson with `-demo N`.
+
+In one line: **save → detect → diff → build → read last choice → restart and rerun**.
 
 Key files:
 
