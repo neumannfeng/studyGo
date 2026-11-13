@@ -1,0 +1,19 @@
+# Build artifacts
+.reload/
+.gocache/
+*.exe
+
+# Local hot-reload state
+.last_demo
+
+# Generated project data
+practice/week3-todo/todos.json
+
+# Editors
+.idea/
+.vscode/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
