@@ -165,11 +165,15 @@ func runAll() {
 func demoBasics() {
 	section(1, "变量、常量与基本类型")
 
-	var name string = "Gopher"
-	age := 8
-	height := 1.75
-	isReady := true
-	const pi = 3.14159
+	var name string = "Gopher" // 字符串
+	var age int = 10           // 整数
+	var height float64 = 1.75  // 浮点数
+	var isReady bool = true    // 布尔值
+	const pi float64 = 3.14159 // 常量也写出类型
+
+	// 声明格式：var 变量名 类型 = 值。
+	// 函数内也可以简写为 age := 8，Go 会自动推断类型；
+	// 初学阶段先练习显式写法，看到类型后再用简写。
 
 	fmt.Println()
 	fmt.Println("  变量值：")

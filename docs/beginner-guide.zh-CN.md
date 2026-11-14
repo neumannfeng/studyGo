@@ -162,13 +162,13 @@ go run test.go
 找到第 1 节里的这一行（行号可能因修改而变化）：
 
 ```go
-age := 8
+var age int = 8
 ```
 
 把它改成：
 
 ```go
-age := 9
+var age int = 9
 ```
 
 保存文件。
@@ -203,7 +203,7 @@ go run ./tools/hotreload
 
 看到 `Go 热重载已启动` 后，先手动输入一次 `1`，让工具记住你的选择。
 
-然后回到编辑器，把 `age := 9` 改成 `10` 并保存。终端会自动显示：
+然后回到编辑器，把 `var age int = 9` 改成 `var age int = 10` 并保存。终端会自动显示：
 
 ```text
 ────────────────────────────────────────────────────────────
@@ -213,10 +213,10 @@ go run ./tools/hotreload
   行号 │ 内容
    167 |
    168 | 	var name string = "Gopher"
--  169 | 	age := 9
-+  169 | 	age := 10
-   170 | 	height := 1.75
-   171 | 	isReady := true
+-  169 | 	var age int = 9
++  169 | 	var age int = 10
+   170 | 	var height float64 = 1.75
+   171 | 	var isReady bool = true
 
 [编译] 成功
 [运行] 自动重跑第 1 节（上次选择）

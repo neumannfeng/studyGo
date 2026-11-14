@@ -162,13 +162,13 @@ Open [test.go](../test.go) in VS Code, GoLand, or any text editor.
 Find this line in lesson 1 (the line number may change):
 
 ```go
-age := 8
+var age int = 8
 ```
 
 Change it to:
 
 ```go
-age := 9
+var age int = 9
 ```
 
 Save the file.
@@ -203,7 +203,7 @@ go run ./tools/hotreload
 
 After `Go 热重载已启动` appears, select lesson `1` once so the tool remembers your choice.
 
-Now change `age := 9` to `10` and save. The terminal shows:
+Now change `var age int = 9` to `var age int = 10` and save. The terminal shows:
 
 ```text
 ────────────────────────────────────────────────────────────
@@ -213,10 +213,10 @@ Now change `age := 9` to `10` and save. The terminal shows:
   行号 │ 内容
    167 |
    168 | 	var name string = "Gopher"
--  169 | 	age := 9
-+  169 | 	age := 10
-   170 | 	height := 1.75
-   171 | 	isReady := true
+-  169 | 	var age int = 9
++  169 | 	var age int = 10
+   170 | 	var height float64 = 1.75
+   171 | 	var isReady bool = true
 
 [编译] 成功
 [运行] 自动重跑第 1 节（上次选择）

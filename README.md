@@ -152,13 +152,13 @@ Go 热重载已启动
 用 VS Code、GoLand 或任意文本编辑器打开 [test.go](test.go)，找到第 1 节里的：
 
 ```go
-age := 8
+var age int = 8
 ```
 
 改成：
 
 ```go
-age := 9
+var age int = 9
 ```
 
 按 `Ctrl+S` 保存（macOS 是 `Cmd+S`）。**只有保存文件才会触发热重载**。
@@ -173,10 +173,10 @@ age := 9
   行号 │ 内容
    167 |
    168 | 	var name string = "Gopher"
--  169 | 	age := 8
-+  169 | 	age := 9
-   170 | 	height := 1.75
-   171 | 	isReady := true
+-  169 | 	var age int = 8
++  169 | 	var age int = 9
+   170 | 	var height float64 = 1.75
+   171 | 	var isReady bool = true
 
 [编译] 成功
 [运行] 自动重跑第 1 节（上次选择）
