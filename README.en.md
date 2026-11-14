@@ -152,13 +152,13 @@ After the overview, enter `1` again so later saves rerun lesson 1 instead of the
 Open [test.go](test.go) in VS Code, GoLand, or any text editor. Find this line in lesson 1:
 
 ```go
-age := 8
+var age int = 8
 ```
 
 Change it to:
 
 ```go
-age := 9
+var age int = 9
 ```
 
 Press `Ctrl+S` to save (on macOS, `Cmd+S`). **Hot reload is triggered only when the file is saved.**
@@ -173,10 +173,10 @@ The terminal shows the diff and reruns the lesson:
   行号 │ 内容
    167 |
    168 | 	var name string = "Gopher"
--  169 | 	age := 8
-+  169 | 	age := 9
-   170 | 	height := 1.75
-   171 | 	isReady := true
+-  169 | 	var age int = 8
++  169 | 	var age int = 9
+   170 | 	var height float64 = 1.75
+   171 | 	var isReady bool = true
 
 [编译] 成功
 [运行] 自动重跑第 1 节（上次选择）
